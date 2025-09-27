@@ -19,10 +19,18 @@ function addProduct() {
     alert("Please fill in all field");
     return;
   }
-  item_Cart.push(itemsInCart);
+
+  if(!isNaN(productNameInput.value))
+  {
+    alert("Please enter valid Product Name!");
+  }else{
+    item_Cart.push(itemsInCart);
   updateTotalPrice(itemsInCart.inputPrice);
   clearInputs();
   displayCart();
+  }
+    
+    
 }
 
 //Clear Inputs
